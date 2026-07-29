@@ -29,5 +29,24 @@ caveats, see [undercounting-heat-deaths.md](undercounting-heat-deaths.md).
 
 ## Verdict
 
-Not yet decided. The final call and its justification go here, then feed
-`wiki/problem-statement.md` (created in step 8 of the workshop).
+**Decided 2026-07-29: Los Angeles.** Applying the decision test to the
+sources held today:
+
+- **Data (test 3):** LA wins outright — public county surveillance
+  (deaths, ER series, heat days) plus neighborhood contrasts
+  ([LA County DPH, 2025](../sources/la-county-dph-extreme-heat-data-brief-2025.md);
+  [ABC7, 2024](../sources/abc7-socal-heat-deaths-undercounted-2024.md)).
+  Korea's evidence never became Seoul-specific.
+- **Gap (test 2):** LA's documented response is small and effortful
+  (~500 AC units/summer, opt-in alerts)
+  ([LAist, 2024](../sources/laist-ladwp-free-ac-seniors-2024.md)); the
+  Korean program landscape remained unsourced here.
+- **Harm (test 1):** judged comparable in seriousness but differently
+  shaped; LA's excess-death estimates
+  ([LA County DPH, 2025](../sources/la-county-dph-extreme-heat-data-brief-2025.md))
+  carried the argument alongside the two data/gap wins.
+
+Caveat, kept on the record: Korea's weaker showing partly reflects that
+we gathered less Korean evidence, not proof the problem is smaller
+there. The commitment feeds
+[problem-statement.md](problem-statement.md).
