@@ -5,11 +5,24 @@
 
 ## Our focus: elderly residents
 
-We chose to center elderly residents. Heat is broadly dangerous, but older
-people carry the highest mortality risk, are more likely to live alone, and
-are hardest to reach through ordinary alerts. *(uncited — this is our
-working hypothesis from the kickoff interview; the first sources must
-confirm or correct it for each region.)*
+We chose to center elderly residents, and the first sources bear the
+choice out. In South Korea, "over 65 percent" of the 238 heat-illness
+deaths recorded since 2011 were people aged 60 or older
+([Korea Times/Yonhap, 2025](../sources/korea-times-heat-deaths-elderly-2025.md)).
+In LA County, older adults (65+) are named among the groups "at greater
+risk" of heat-related illness
+([LA County DPH, 2025](../sources/la-county-dph-extreme-heat-data-brief-2025.md)),
+because, per the CDC, "they're more likely to have chronic health issues
+or take medications that affect the body's response to heat"
+([LAist, 2024](../sources/laist-ladwp-free-ac-seniors-2024.md)).
+Whether elderly people are also *hardest to reach with alerts* remains a
+working hypothesis. *(uncited)*
+
+Our challenge sits under SDG 13 — most directly Target 13.1
+("Strengthen resilience and adaptive capacity to climate-related hazards
+and natural disasters in all countries") and Target 13.3 (education,
+"impact reduction and early warning")
+([UN DESA, 2026](../sources/un-sdg13-targets.md)).
 
 ## Candidate regions
 
