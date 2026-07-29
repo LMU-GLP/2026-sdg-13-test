@@ -24,15 +24,14 @@ and natural disasters in all countries") and Target 13.3 (education,
 "impact reduction and early warning")
 ([UN DESA, 2026](../sources/un-sdg13-targets.md)).
 
-## Candidate regions
+## Region: committed to Los Angeles (2026-07-29)
 
-We are researching two regions in parallel before committing to one:
-
-- **Los Angeles** — see [los-angeles.md](los-angeles.md)
-- **Seoul / South Korea** — see [seoul.md](seoul.md)
-
-The running comparison lives in
-[region-comparison.md](region-comparison.md).
+We researched two candidates in parallel — **Los Angeles**
+([los-angeles.md](los-angeles.md)) and **Seoul / South Korea**
+([seoul.md](seoul.md)) — and committed to Los Angeles. The comparison
+and the verdict's rationale live in
+[region-comparison.md](region-comparison.md); the resulting problem
+statement is [problem-statement.md](problem-statement.md).
 
 ## How we'll pick a region (the decision test)
 
@@ -50,7 +49,10 @@ A region wins by scoring well on all three, not by enthusiasm.
 
 ## Solution direction
 
-Deliberately open. Candidate directions we surfaced (community check-in
-networks, cooling access, early warning that actually activates elderly
-people) are noted in [research-plan.md](research-plan.md), but we pick one
-only after the evidence is in.
+Narrowed but not decided. The adopted
+[problem-statement.md](problem-statement.md) frames the outcome — making
+staying cool **at home** the default for South LA's low-income seniors —
+which centers the indoor/no-AC mechanism our LA sources document. The
+specific intervention (cooling hardware, delivery redesign, check-ins,
+alert activation) is still open pending the reach evidence ranked in
+[research-plan.md](research-plan.md).

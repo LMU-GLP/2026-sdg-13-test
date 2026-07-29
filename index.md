@@ -9,7 +9,8 @@ Catalog of every page in this wiki. Updated on every ingest.
 - [wiki/seoul.md](wiki/seoul.md) — Korea region page: 2 in 3 heat deaths are 60+, outdoor-work death profile, national-only data so far.
 - [wiki/region-comparison.md](wiki/region-comparison.md) — Side-by-side against the decision test; different death profiles (indoor LA vs outdoor Korea); evidence imbalance flagged.
 - [wiki/undercounting-heat-deaths.md](wiki/undercounting-heat-deaths.md) — Concept page: why official heat-death counts understate the toll, and what that means for each decision test.
-- [wiki/research-plan.md](wiki/research-plan.md) — Five minimum sources (all collected), ranked next sources, open questions, known gaps.
+- [wiki/research-plan.md](wiki/research-plan.md) — Five minimum sources (all collected), ranked next sources (re-ranked for LA), open questions, known gaps.
+- [wiki/problem-statement.md](wiki/problem-statement.md) — Adopted problem statement: South LA's low-income seniors, indoor heat deaths, hidden toll, and the "cool at home by default" how-might-we.
 
 ## Sources
 

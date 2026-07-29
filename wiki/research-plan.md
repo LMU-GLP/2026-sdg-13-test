@@ -15,23 +15,25 @@ workflow checks the wiki against this page.
 
 ## Highest-value next sources
 
-Ranked by what the decision test still can't answer — note the current
-evidence imbalance (4 of 5 sources are LA-side or global; Korea has one):
+Re-ranked 2026-07-29 after the region commitment to **Los Angeles**
+([problem-statement.md](problem-statement.md)):
 
-1. **Korea dataset or program source.** KDCA annual heat-illness
-   surveillance report, or coverage of the cooling-shelter network
-   (무더위쉼터) / smart-plug check-in pilots for isolated seniors.
-   Without it, comparison row 2 is uncited on the Korea side.
-2. **Seoul-city-specific harm data.** E.g. the record 2018 summer (Seoul
-   hit 39.6°C); dong-level or city-level deaths and ER figures. Our
-   Korea numbers are national and farm-heavy, which may not describe
-   Seoul.
-3. **LA elderly share of heat deaths/ER visits.** We know 65+ is
+1. **LA elderly share of heat deaths/ER visits.** We know 65+ is
    high-risk but hold no LA age-share number to match Korea's "2 in 3."
-4. **Alert reach among elderly people.** Any evidence on whether opt-in
-   heat alerts (LA) or KMA warnings (Korea) actually reach isolated
-   seniors — this decides the "hardest to reach" hypothesis in
+   The pitch's focus population currently rests on risk-group
+   designation, not an LA outcome statistic.
+2. **AC access numbers for South LA / LA seniors.** ABC7's "more homes
+   lack air conditioning" is qualitative; a quantified figure (e.g.
+   share of renters without AC) would harden the core claim. Candidate:
+   LAist's 2020 reporting citing USC research (~30% of LA-area renters
+   without AC) — found but not yet ingested.
+3. **Reach evidence for existing programs.** Does anyone measure who
+   subscribes to county heat alerts or uses cooling centers? Decides
+   the *(uncited)* "hardest to reach" hypothesis in
    [challenge.md](challenge.md).
+4. *(Deprioritized after region decision)* Korea dataset / Seoul-level
+   data — only needed now if the team revisits the region call; the
+   caveat lives in [region-comparison.md](region-comparison.md).
 
 ## Open questions
 
