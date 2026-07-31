@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HeatWatch — early warning for farmers who work alone</title>
+<meta name="description" content="An early-warning and check-in service for elderly farmers working alone during extreme heat in South Korea.">
+<style>
+  :root{
+    --bg:#fff8f2;
+    --bg-alt:#fff1e6;
+    --text:#241a12;
+    --text-dim:#5a4a3c;
+    --accent:#c8471f;
+    --accent-dim:#e07a4a;
+    --card-bg:#ffffff;
+    --card-border:#f0ddc8;
+    --quote-bg:#fdece0;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#1b1512;
+      --bg-alt:#241c17;
+      --text:#f5ece3;
+      --text-dim:#c9b8a8;
+      --accent:#ff8452;
+      --accent-dim:#e0673a;
+      --card-bg:#2a221c;
+      --card-border:#3d3128;
+      --quote-bg:#332720;
+    }
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px;}
+  a{color:var(--accent);}
+
+  header.hero{
+    padding:64px 0 48px;
+    background:linear-gradient(180deg,var(--bg-alt),var(--bg));
+    border-bottom:1px solid var(--card-border);
+  }
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-size:.78rem;
+    font-weight:700;
+    color:var(--accent);
+    margin:0 0 12px;
+  }
+  h1{
+    font-size:clamp(2rem,6vw,2.9rem);
+    line-height:1.1;
+    margin:0 0 16px;
+  }
+  .tagline{
+    font-size:1.15rem;
+    color:var(--text-dim);
+    max-width:52ch;
+    margin:0 0 28px;
+  }
+  .hero-stat{
+    background:var(--card-bg);
+    border:1px solid var(--card-border);
+    border-radius:14px;
+    padding:20px 22px;
+    max-width:560px;
+  }
+  .hero-stat .num{
+    font-size:1.05rem;
+    font-weight:600;
+  }
+  .hero-stat .num b{
+    color:var(--accent);
+    font-size:1.3em;
+  }
+  .cite{
+    font-size:.8rem;
+    color:var(--text-dim);
+  }
+  .cite a{
+    color:var(--text-dim);
+    text-decoration:underline;
+  }
+
+  section{padding:48px 0;}
+  section.alt{background:var(--bg-alt);}
+  h2{
+    font-size:1.5rem;
+    margin:0 0 8px;
+  }
+  .section-lede{
+    color:var(--text-dim);
+    margin:0 0 28px;
+    max-width:60ch;
+  }
+
+  .stat-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:16px;
+  }
+  .stat-card{
+    background:var(--card-bg);
+    border:1px solid var(--card-border);
+    border-radius:14px;
+    padding:22px;
+  }
+  .stat-card .big{
+    font-size:2.2rem;
+    font-weight:800;
+    color:var(--accent);
+    display:block;
+    margin-bottom:6px;
+  }
+  .stat-card p{
+    margin:0 0 10px;
+    font-size:.95rem;
+  }
+
+  blockquote{
+    background:var(--quote-bg);
+    border-left:4px solid var(--accent);
+    margin:28px 0 0;
+    padding:18px 22px;
+    border-radius:0 10px 10px 0;
+    font-size:1.05rem;
+    font-style:italic;
+  }
+  blockquote footer{
+    margin-top:10px;
+    font-style:normal;
+  }
+
+  .steps{
+    display:grid;
+    gap:16px;
+  }
+  .step{
+    display:grid;
+    grid-template-columns:44px 1fr;
+    gap:16px;
+    background:var(--card-bg);
+    border:1px solid var(--card-border);
+    border-radius:14px;
+    padding:20px 22px;
+    align-items:start;
+  }
+  .step .n{
+    width:44px;height:44px;
+    border-radius:50%;
+    background:var(--accent);
+    color:#fff;
+    font-weight:800;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.1rem;
+  }
+  .step h3{margin:0 0 6px;font-size:1.05rem;}
+  .step p{margin:0 0 8px;color:var(--text-dim);font-size:.95rem;}
+
+  .people-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:16px;
+  }
+  .person-card{
+    background:var(--card-bg);
+    border:1px solid var(--card-border);
+    border-radius:14px;
+    padding:20px;
+    text-align:left;
+  }
+  .person-card .role{
+    font-weight:700;
+    margin:0 0 6px;
+  }
+  .person-card p{margin:0;color:var(--text-dim);font-size:.9rem;}
+
+  .not-list{
+    background:var(--card-bg);
+    border:1px solid var(--card-border);
+    border-radius:14px;
+    padding:8px 24px;
+  }
+  .not-list li{margin:14px 0;}
+  .not-list li p{margin:4px 0 0;color:var(--text-dim);font-size:.9rem;}
+
+  footer.site{
+    padding:40px 0 64px;
+    border-top:1px solid var(--card-border);
+  }
+  footer.site h2{font-size:1.1rem;}
+  .source-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+    display:grid;
+    gap:8px;
+    font-size:.88rem;
+  }
+  .source-list a{text-decoration:underline;}
+  .repo-note{
+    margin-top:28px;
+    font-size:.85rem;
+    color:var(--text-dim);
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">SDG 13 · Climate Action · South Korea</p>
+    <h1>They're not dying of heat.<br>They're dying alone in it.</h1>
+    <p class="tagline">HeatWatch is an early-warning and check-in service for
+      elderly farmers who work alone during extreme heat in South Korea.</p>
+    <div class="hero-stat">
+      <p class="num">In the 2025 heat season alone, <b>5 of 29</b> heat
+        deaths in Korea were elderly people who died doing outdoor field
+        work.</p>
+      <p class="cite">Source: <a href="sources/korea-heat-deaths-2025-season-elderly-farmworkers.md">2025-season elderly farm-worker heat deaths</a></p>
+    </div>
+  </div>
+</header>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>This isn't a one-season problem</h2>
+    <p class="section-lede">It's a pattern that goes back to 2011, and the
+      people at the center of it are told safety advice that doesn't fit
+      their lives.</p>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <span class="big">65%+</span>
+        <p>of Korea's 238 recorded heat deaths since 2011 were people aged
+          60 or older.</p>
+        <p class="cite"><a href="sources/korea-heat-deaths-elderly.md">Korea heat deaths, KDCA data</a></p>
+      </div>
+      <div class="stat-card">
+        <span class="big">32%</span>
+        <p>of those recorded deaths happened on farms — more than at home
+          or near roads.</p>
+        <p class="cite"><a href="sources/korea-heat-deaths-elderly.md">Korea heat deaths, KDCA data</a></p>
+      </div>
+      <div class="stat-card">
+        <span class="big">70%</span>
+        <p>of the 2025 season's heat deaths (through mid-September) were
+          elderly or disabled people.</p>
+        <p class="cite"><a href="sources/korea-heat-deaths-2025-season-elderly-farmworkers.md">2025-season elderly farm-worker heat deaths</a></p>
+      </div>
+    </div>
+    <blockquote>
+      "Health authorities recommended agriculture workers to work in early
+      mornings or late evenings and avoid going outdoors in the hours
+      between noon and 5 p.m."
+      <footer class="cite">— which is advice for people who have somebody
+        else to do it. Source: <a href="sources/korea-heat-deaths-elderly.md">Korea heat deaths, KDCA data</a></footer>
+    </blockquote>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How HeatWatch works</h2>
+    <p class="section-lede">Two stages: a warning before the heat arrives,
+      and a check-in during the hours it's most dangerous.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <div>
+          <h3>Forecast warning</h3>
+          <p>Days ahead of dangerous heat, a warning goes out by phone call
+            or text to the farmer, their designated buddy, and a local
+            health worker — all at once.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <div>
+          <h3>Check-in during the danger window</h3>
+          <p>Between noon and 5 p.m. on hot days, the farmer checks in by
+            phone, text, or a simple field device — no smartphone
+            required.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <div>
+          <h3>Automatic escalation</h3>
+          <p>If the farmer doesn't check in, their buddy and the local
+            health worker are notified immediately to go find out why.</p>
+        </div>
+      </div>
+    </div>
+    <p class="repo-note">This warning-first design follows the same shape
+      as Ahmedabad's Heat Action Plan, which gives up to 5 days' notice
+      before a heat wave and is credited with averting roughly 1,190 deaths
+      a year in that city.
+      <a href="sources/ahmedabad-heat-action-plan.md">Source</a> — a
+      different city, cited here for the approach, not as a Korea number.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Who's in the loop</h2>
+    <div class="people-grid">
+      <div class="person-card">
+        <p class="role">The farmer</p>
+        <p>Gets the forecast warning and checks in during the danger
+          window — by phone, text, or a field device.</p>
+      </div>
+      <div class="person-card">
+        <p class="role">The buddy</p>
+        <p>A family member or neighbor, notified the moment a check-in is
+          missed.</p>
+      </div>
+      <div class="person-card">
+        <p class="role">The health worker</p>
+        <p>A local official who can escalate a missed check-in into an
+          actual welfare check.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What this isn't</h2>
+    <p class="section-lede">Being honest about scope now, so the pitch
+      doesn't promise more than it can do.</p>
+    <ul class="not-list">
+      <li>Not emergency response. HeatWatch alerts and prompts a welfare
+        check — it doesn't dispatch ambulances or provide medical care.</li>
+      <li>Not for every heat death. It targets people working alone in
+        fields, not the 15% of Korea's recorded heat deaths that happen at
+        home or the 14% that happen near roads.
+        <p class="cite"><a href="sources/korea-heat-deaths-elderly.md">Korea heat deaths, KDCA data</a></p>
+      </li>
+      <li>Not launching nationwide. It starts as a single-village pilot
+        with one agricultural cooperative before anything wider.</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <h2>Every number on this page, sourced</h2>
+    <ul class="source-list">
+      <li><a href="sources/korea-heat-deaths-elderly.md">Korea heat deaths since 2011 (KDCA, via Yonhap/Korea Times)</a></li>
+      <li><a href="sources/korea-heat-deaths-2025-season-elderly-farmworkers.md">2025-season elderly & farm-worker heat deaths (Medical World News)</a></li>
+      <li><a href="sources/ahmedabad-heat-action-plan.md">Ahmedabad's Heat Action Plan (Exemplars in Global Health)</a></li>
+    </ul>
+    <p class="repo-note">Read the full research behind this page in
+      <a href="wiki/problem-statement.md">wiki/problem-statement.md</a> and
+      <a href="wiki/concept.md">wiki/concept.md</a>, or browse every source
+      in <a href="sources/">sources/</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -14,3 +14,20 @@ Append-only. Newest entries at the bottom.
   Ingested all five sources into `wiki/`: overview, two region entity pages,
   one comparison page, two concept pages, one existing-programs page, and a
   gaps page. No region chosen yet; no problem statement written yet.
+
+- **2026-07-31** — Interviewed the team for a problem statement. Region:
+  South Korea. Affected group: elderly agricultural workers. Found and
+  wrote a new source to close a gap flagged in
+  [gaps-and-open-questions.md](gaps-and-open-questions.md) — the
+  elderly-and-farm-work overlap wasn't in any existing source
+  ([korea-heat-deaths-2025-season-elderly-farmworkers.md](../sources/korea-heat-deaths-2025-season-elderly-farmworkers.md)).
+  Wrote and saved [problem-statement.md](problem-statement.md), citing
+  every figure. Updated [index.md](index.md) to list both.
+
+- **2026-07-31** — Interviewed the team for a solution concept. Landed on:
+  an early-warning and check-in service (phone/SMS plus a physical
+  device), reaching the farmer, a designated buddy, and a local health
+  worker, sold to local governments and co-ops, piloted in one village
+  first. Wrote and saved [concept.md](concept.md), flagging unverified
+  assumptions (phone reception in fields, buddy availability, device
+  adoption) as open risk rather than fact. Updated [index.md](index.md).
