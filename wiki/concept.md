@@ -5,8 +5,8 @@ South Korea who farm alone are dying of heat, in a pattern that recurs
 every season — 5 of 29 heat deaths in the 2025 season through
 mid-September were elderly people who died doing outdoor field work
 ([korea-heat-deaths-2025-season-elderly-farmworkers.md](../sources/korea-heat-deaths-2025-season-elderly-farmworkers.md)),
-inside a 13-year pattern where 65%+ of Korea's 238 recorded heat deaths are
-age 60+ and 32% happen on farms
+inside a pattern going back to 2011 where 65%+ of Korea's 238 recorded
+heat deaths are age 60+ and 32% happen on farms
 ([korea-heat-deaths-elderly.md](../sources/korea-heat-deaths-elderly.md)).
 Official advice to avoid outdoor work between noon and 5 p.m. assumes
 someone else can cover that work — advice that doesn't fit a farmer with no

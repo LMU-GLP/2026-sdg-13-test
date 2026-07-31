@@ -30,7 +30,7 @@ or older**, and roughly **32% (about 76 of 238) died on farms**
 
 These two figures are not the same measurement and should not be added
 together: one is a single season's count with a direct elderly-and-farm-work
-overlap (5 of 29), the other is a 13-year cumulative total with age and
+overlap (5 of 29), the other is a cumulative total since 2011 with age and
 setting reported as *separate*, non-overlapping percentages (65%+ age, 32%
 setting) that our sources never cross-tabulate for the full period
 ([korea-heat-deaths-elderly.md](../sources/korea-heat-deaths-elderly.md);
@@ -67,8 +67,9 @@ work alone
 In South Korea, elderly people who farm alone are dying of heat at a rate
 that shows up every season, not once: 5 of 29 heat deaths in the 2025
 season through mid-September were elderly people who died doing outdoor
-field work, inside a 13-year pattern where 65%+ of the country's 238
-recorded heat deaths are age 60+ and nearly a third happen on farms. The
+field work, inside a pattern going back to 2011 where 65%+ of the
+country's 238 recorded heat deaths are age 60+ and nearly a third happen
+on farms. The
 official safety advice — stay indoors between noon and 5 p.m. — assumes a
 worker who isn't alone. The people this problem statement is about often
 are.
@@ -77,8 +78,9 @@ are.
 
 - It does not claim a single number for "how many elderly agricultural
   workers die of heat in Korea each year" — our sources give a 29-death
-  season and a 238-death 13-year total, measured differently, and don't
-  give one combined annual figure for this specific group.
+  season and a 238-death cumulative total since 2011, measured
+  differently, and don't give one combined annual figure for this specific
+  group.
 - It does not compare these counts to Los Angeles's heat death figures —
   see [Los Angeles vs. South Korea](la-vs-south-korea.md) for why those
   numbers aren't measured the same way.

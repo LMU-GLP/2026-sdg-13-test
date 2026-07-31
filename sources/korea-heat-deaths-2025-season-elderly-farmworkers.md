@@ -30,8 +30,8 @@
 ## This is a different window than our other Korea source
 
 [korea-heat-deaths-elderly.md](korea-heat-deaths-elderly.md) reports a
-13-year cumulative total (238 deaths, 2011–2024) with separate percentages
-for age (65%+ are 60+) and setting (32% on farms), but never states the
+cumulative total since 2011 (238 deaths, end year not stated) with separate
+percentages for age (65%+ are 60+) and setting (32% on farms), but never states the
 overlap between the two. This article covers a single season (through
 mid-September 2025, 29 deaths) but is the only source found so far that
 directly names an elderly-and-farm-work intersection: 5 of 29. The two
