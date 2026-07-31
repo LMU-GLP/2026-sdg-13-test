@@ -8,6 +8,8 @@ heat?** Region not yet chosen. Five sources ingested so far, all in
 
 - [Overview](overview.md) — synthesis of everything below, and why this is
   an SDG 13 project.
+- [Problem statement](problem-statement.md) — the region and group we've
+  committed to: elderly agricultural workers in South Korea.
 
 ## Regions (entity pages)
 
@@ -40,8 +42,6 @@ heat?** Region not yet chosen. Five sources ingested so far, all in
 
 ## Not yet written
 
-- `problem-statement.md` — comes after the team decides on a region
-  (Session 1, step 5).
 - `concept.md` and `pitch.md` — Session 2.
 
 ## All sources
@@ -53,5 +53,6 @@ heat?** Region not yet chosen. Five sources ingested so far, all in
 | [un-sdg13-targets.md](../sources/un-sdg13-targets.md) | Official SDG 13 targets |
 | [cdc-us-heat-mortality-trends.md](../sources/cdc-us-heat-mortality-trends.md) | US national heat mortality, 2000–2023 |
 | [ahmedabad-heat-action-plan.md](../sources/ahmedabad-heat-action-plan.md) | Ahmedabad's Heat Action Plan |
+| [korea-heat-deaths-2025-season-elderly-farmworkers.md](../sources/korea-heat-deaths-2025-season-elderly-farmworkers.md) | 2025-season elderly + farm-work death overlap |
 
 See [log.md](log.md) for the ingest history.
