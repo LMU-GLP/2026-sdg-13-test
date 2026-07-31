@@ -20,7 +20,8 @@ in its top-right corner.
 
 - `CLAUDE.md` — the rules Claude follows in this repo
 - `sources/` — two sources we found for you. Read both before you pick a region:
-  - [`sources/`](sources/)
+  - [Los Angeles](sources/la-extreme-heat.md)
+  - [South Korea](sources/korea-heat-deaths-elderly.md)
 - UN targets for your goal: [sdgs.un.org/goals/goal13](https://sdgs.un.org/goals/goal13)
 
 ## What Claude Code is
