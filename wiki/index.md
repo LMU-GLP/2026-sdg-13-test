@@ -15,6 +15,8 @@ ingested so far, all in [`sources/`](../sources/).
   check-in service for elderly farmers who work alone.
 - [Pitch](pitch.md) — the 90-second spoken script, built from the problem
   statement, the concept, and the live page.
+- [Presentation](presentation.md) — the 10-minute team presentation script:
+  Problem, Evidence, Solution, Demo, Ask, with a citation on every number.
 
 ## Regions (entity pages)
 

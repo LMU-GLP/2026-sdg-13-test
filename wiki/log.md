@@ -43,3 +43,16 @@ Append-only. Newest entries at the bottom.
   script built from the problem statement, the concept, and the live
   page. Every figure in it cites the source file it came from. Updated
   [index.md](index.md).
+
+- **2026-07-31** — Interviewed the team and built a working two-screen
+  prototype: `app/dashboard.html` (health worker/buddy view) and
+  `app/checkin.html` (the live farmer's check-in), synced in real time via
+  `BroadcastChannel` and `localStorage`, no backend. Verified the full
+  loop in a real browser — live check-in, automatic overdue transition,
+  and resolve — before calling it done. Linked from `index.html`.
+
+- **2026-07-31** — Interviewed the team for the 10-minute presentation
+  (arc, timing split, lead evidence, cuts, presenter assignments). Wrote
+  and saved [presentation.md](presentation.md): Problem, Evidence,
+  Solution, Demo, Ask, with a citation on every number. Updated
+  [index.md](index.md).
