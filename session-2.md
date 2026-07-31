@@ -61,7 +61,8 @@ Only the driver needs to do this. Everyone else can read the repo straight from
 Two sources are already in `sources/`, one on each region. **Read them before
 you send anything** — they're the only evidence you have right now:
 
-- [`sources/`](sources/)
+- [Los Angeles](sources/la-extreme-heat.md)
+- [South Korea](sources/korea-heat-deaths-elderly.md)
 
 This prompt reads them, finds three more, and builds the wiki from all five.
 
