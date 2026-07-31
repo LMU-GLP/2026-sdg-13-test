@@ -23,3 +23,11 @@ Append-only. Newest entries at the bottom.
   ([korea-heat-deaths-2025-season-elderly-farmworkers.md](../sources/korea-heat-deaths-2025-season-elderly-farmworkers.md)).
   Wrote and saved [problem-statement.md](problem-statement.md), citing
   every figure. Updated [index.md](index.md) to list both.
+
+- **2026-07-31** — Interviewed the team for a solution concept. Landed on:
+  an early-warning and check-in service (phone/SMS plus a physical
+  device), reaching the farmer, a designated buddy, and a local health
+  worker, sold to local governments and co-ops, piloted in one village
+  first. Wrote and saved [concept.md](concept.md), flagging unverified
+  assumptions (phone reception in fields, buddy availability, device
+  adoption) as open risk rather than fact. Updated [index.md](index.md).

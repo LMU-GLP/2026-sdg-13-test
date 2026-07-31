@@ -1,8 +1,9 @@
 # Wiki index
 
 Challenge: **How might we help a neighborhood stay safe during extreme
-heat?** Region not yet chosen. Five sources ingested so far, all in
-[`sources/`](../sources/).
+heat?** Region chosen: **South Korea**, elderly agricultural workers who
+farm alone (see [problem-statement.md](problem-statement.md)). Six sources
+ingested so far, all in [`sources/`](../sources/).
 
 ## Start here
 
@@ -10,6 +11,8 @@ heat?** Region not yet chosen. Five sources ingested so far, all in
   an SDG 13 project.
 - [Problem statement](problem-statement.md) — the region and group we've
   committed to: elderly agricultural workers in South Korea.
+- [Concept](concept.md) — our proposed solution: an early-warning and
+  check-in service for elderly farmers who work alone.
 
 ## Regions (entity pages)
 
@@ -42,7 +45,7 @@ heat?** Region not yet chosen. Five sources ingested so far, all in
 
 ## Not yet written
 
-- `concept.md` and `pitch.md` — Session 2.
+- `pitch.md` — Session 2.
 
 ## All sources
 
