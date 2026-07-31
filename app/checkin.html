@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HeatWatch — Check In</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand">Heat<span>Watch</span> — Check-in</div>
+    <nav>
+      <a href="dashboard.html">Open dashboard →</a>
+      <a href="../index.html">← Back to pitch page</a>
+    </nav>
+  </div>
+
+  <div class="scope-note">
+    <b>Prototype scope:</b> in the real concept this happens by phone call
+    or SMS, no smartphone required (see
+    <a href="../wiki/concept.md">concept.md</a>). This screen stands in for
+    that phone, compressed to a
+    <span id="window-seconds"></span>-second window so the demo plays out
+    live instead of over hours.
+  </div>
+
+  <div class="checkin-card">
+    <p class="farmer-name" id="farmer-name">—</p>
+    <p class="farmer-plot" id="farmer-plot">—</p>
+
+    <div id="active-state">
+      <p class="countdown" id="countdown">--</p>
+      <p class="countdown-label">time left to check in</p>
+      <button class="btn im-ok-btn" id="ok-btn">I'm OK — Check In</button>
+    </div>
+
+    <div id="status-banner"></div>
+  </div>
+
+  <div class="controls">
+    <button class="btn secondary" id="replay-btn">Start a new check-in window</button>
+  </div>
+</div>
+
+<script src="shared.js"></script>
+<script>
+  document.getElementById("window-seconds").textContent = CHECKIN_WINDOW_SECONDS;
+
+  const nameEl = document.getElementById("farmer-name");
+  const plotEl = document.getElementById("farmer-plot");
+  const countdownEl = document.getElementById("countdown");
+  const activeEl = document.getElementById("active-state");
+  const bannerEl = document.getElementById("status-banner");
+  const okBtn = document.getElementById("ok-btn");
+
+  let ticker = null;
+
+  function checkIn() {
+    const state = loadState();
+    const farmer = getFarmer(state, LIVE_FARMER_ID);
+    if (farmer.status !== "due_soon") return;
+    farmer.status = "on_time";
+    farmer.lastCheckIn = nowLabel();
+    saveState(state);
+    render();
+  }
+
+  function render() {
+    const state = loadState();
+    const farmer = getFarmer(state, LIVE_FARMER_ID);
+    nameEl.textContent = `${farmer.name}, ${farmer.age}`;
+    plotEl.textContent = farmer.plot;
+
+    if (farmer.status === "due_soon") {
+      activeEl.style.display = "";
+      bannerEl.innerHTML = "";
+      const remaining = Math.max(0, Math.round((farmer.deadline - Date.now()) / 1000));
+      const mm = String(Math.floor(remaining / 60)).padStart(2, "0");
+      const ss = String(remaining % 60).padStart(2, "0");
+      countdownEl.textContent = `${mm}:${ss}`;
+      countdownEl.className = "countdown" + (remaining <= 15 ? " danger" : remaining <= 25 ? " warn" : "");
+      okBtn.disabled = false;
+
+      if (remaining <= 0) {
+        farmer.status = "overdue";
+        saveState(state);
+        render();
+        return;
+      }
+    } else {
+      activeEl.style.display = "none";
+      if (farmer.status === "on_time") {
+        bannerEl.innerHTML = `<div class="status-banner ok">✓ Checked in at ${farmer.lastCheckIn}. All good.</div>`;
+      } else if (farmer.status === "overdue") {
+        bannerEl.innerHTML = `<div class="status-banner overdue">No check-in received. Your buddy and health worker have been notified and are checking on you.</div>`;
+      } else if (farmer.status === "resolved") {
+        bannerEl.innerHTML = `<div class="status-banner ok">A health worker checked on you at ${farmer.resolvedAt}. You're marked safe.</div>`;
+      }
+    }
+  }
+
+  okBtn.addEventListener("click", checkIn);
+
+  document.getElementById("replay-btn").addEventListener("click", () => {
+    const state = loadState();
+    startNewCheckinWindow(state);
+    saveState(state);
+    render();
+  });
+
+  onStateChange(render);
+  render();
+  ticker = setInterval(render, 1000);
+</script>
+</body>
+</html>

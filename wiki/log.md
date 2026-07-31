@@ -31,3 +31,15 @@ Append-only. Newest entries at the bottom.
   first. Wrote and saved [concept.md](concept.md), flagging unverified
   assumptions (phone reception in fields, buddy availability, device
   adoption) as open risk rather than fact. Updated [index.md](index.md).
+
+- **2026-07-31** — Built and verified `index.html`, a live prototype page
+  citing every stat to its source file. Manually checked every number
+  against the source text; found and fixed one unsupported claim (a
+  computed "13-year pattern" the sources never actually state) across
+  `index.html`, [problem-statement.md](problem-statement.md),
+  [concept.md](concept.md), and the source's own editorial note.
+
+- **2026-07-31** — Wrote [pitch.md](pitch.md), a 90-second spoken pitch
+  script built from the problem statement, the concept, and the live
+  page. Every figure in it cites the source file it came from. Updated
+  [index.md](index.md).

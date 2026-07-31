@@ -13,6 +13,8 @@ ingested so far, all in [`sources/`](../sources/).
   committed to: elderly agricultural workers in South Korea.
 - [Concept](concept.md) — our proposed solution: an early-warning and
   check-in service for elderly farmers who work alone.
+- [Pitch](pitch.md) — the 90-second spoken script, built from the problem
+  statement, the concept, and the live page.
 
 ## Regions (entity pages)
 
@@ -42,10 +44,6 @@ ingested so far, all in [`sources/`](../sources/).
 
 - [Gaps and open questions](gaps-and-open-questions.md) — what this wiki
   can't yet answer, and what to research next.
-
-## Not yet written
-
-- `pitch.md` — Session 2.
 
 ## All sources
 
