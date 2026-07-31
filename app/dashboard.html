@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HeatWatch — Health Worker Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand">Heat<span>Watch</span> — Dashboard</div>
+    <nav>
+      <a href="checkin.html">Open check-in screen →</a>
+      <a href="../index.html">← Back to pitch page</a>
+    </nav>
+  </div>
+
+  <div class="scope-note">
+    <b>Prototype scope:</b> this is a working demo, not a production system.
+    Real check-ins happen by phone call or SMS (see
+    <a href="../wiki/concept.md">concept.md</a>) — this dashboard simulates
+    that with a live check-in screen instead. No real farmers, no backend,
+    no SMS. The farmers listed are demo data, not real individuals. The
+    days-ahead forecast-warning stage of the concept isn't built here; this
+    demo covers the real-time check-in and escalation loop only.
+  </div>
+
+  <h1>Today's check-ins</h1>
+  <p class="lede">Sorted so anyone overdue is impossible to miss.</p>
+
+  <div class="summary-strip" id="summary"></div>
+  <div class="roster" id="roster"></div>
+
+  <div class="controls">
+    <button class="btn secondary" id="reset-btn">Reset demo data</button>
+  </div>
+</div>
+
+<script src="shared.js"></script>
+<script>
+  const rosterEl = document.getElementById("roster");
+  const summaryEl = document.getElementById("summary");
+
+  function timeSince(farmer) {
+    if (farmer.status === "resolved") return `Resolved ${farmer.resolvedAt}`;
+    if (farmer.status === "on_time") return `Checked in ${farmer.lastCheckIn}`;
+    if (farmer.status === "overdue") {
+      return farmer.dueLabel
+        ? `Missed check-in — due ${farmer.dueLabel}`
+        : "Missed check-in — check-in window expired";
+    }
+    if (farmer.status === "due_soon") {
+      if (farmer.isLive) return "Check-in window in progress now";
+      return `Due by ${farmer.dueLabel}`;
+    }
+    return "";
+  }
+
+  function render() {
+    const state = loadState();
+    const farmers = [...state.farmers].sort(
+      (a, b) => STATUS_ORDER[a.status] - STATUS_ORDER[b.status]
+    );
+
+    const counts = { overdue: 0, due_soon: 0, on_time: 0, resolved: 0 };
+    farmers.forEach((f) => counts[f.status]++);
+
+    summaryEl.innerHTML = Object.keys(counts)
+      .map(
+        (key) => `
+        <div class="summary-tile ${key}">
+          <span class="n">${counts[key]}</span>
+          <span class="l">${STATUS_LABEL[key]}</span>
+        </div>`
+      )
+      .join("");
+
+    rosterEl.innerHTML = farmers
+      .map((f) => {
+        const resolveBtn =
+          f.status === "overdue"
+            ? `<button class="btn" data-resolve="${f.id}">Mark as checked</button>`
+            : "";
+        const liveTag = f.isLive
+          ? `<span class="badge" style="background:var(--text-dim);color:#fff;">live</span>`
+          : "";
+        return `
+        <div class="row ${f.status}">
+          <div class="info">
+            <div class="name">${f.name} · ${f.age} ${liveTag}</div>
+            <div class="meta">${f.plot} — ${timeSince(f)}</div>
+          </div>
+          <span class="badge ${f.status}">${STATUS_LABEL[f.status]}</span>
+          ${resolveBtn}
+        </div>`;
+      })
+      .join("");
+
+    rosterEl.querySelectorAll("[data-resolve]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const s = loadState();
+        const farmer = getFarmer(s, btn.dataset.resolve);
+        farmer.status = "resolved";
+        farmer.resolvedAt = nowLabel();
+        saveState(s);
+        render();
+      });
+    });
+  }
+
+  document.getElementById("reset-btn").addEventListener("click", () => {
+    resetState();
+    render();
+  });
+
+  onStateChange(render);
+  render();
+  setInterval(render, 1000); // keeps "due soon" -> "overdue" transitions visible live
+</script>
+</body>
+</html>
